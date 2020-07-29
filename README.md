@@ -1,2 +1,2 @@
 # hello-R
-repo of R course
+repo for R course
