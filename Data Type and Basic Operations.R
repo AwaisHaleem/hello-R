@@ -103,3 +103,10 @@ as.logical(x)
 
 as.complex(x)
 
+
+#matrix
+
+m <- matrix(nrow = 3, ncol = 6)
+m
+dim(m)
+attributes(m)
