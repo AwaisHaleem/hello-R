@@ -110,3 +110,97 @@ m <- matrix(nrow = 3, ncol = 6)
 m
 dim(m)
 attributes(m)
+
+m <- matrix(1:6, nrow = 3, ncol = 2)
+m
+attributes(m)
+
+
+# another way to built matrix
+m = 1:10
+m
+dim(m) <- c(2, 5)
+m
+
+dim(m) <- c(5, 2)
+m
+
+
+# column binding and row binding
+m <- 1:6
+n <- 6:11
+
+rbind(m, n)
+cbind(m, n)
+
+
+# Factors
+x <- factor(c("yes", "no", "no", "no", "yes", "yes"))
+x
+table(x)
+
+unclass(x)
+
+x <- factor(c("yes", "no", "no", "no", "yes", "yes","hi"))
+x
+
+table(x)
+unclass(x)
+
+x <- factor(c("hi", "vi", "bi", "chi", "hi", "chi"))
+x
+table(x)
+attributes(x)
+unclass(x)
+x
+
+x <- factor(c("hi", "vi", "bi", "chi", "hi", "chi"), levels = c("chi", "vi", "hi", "bi"))
+x
+table(x)
+unclass(x)
+
+
+# is.Na and is.Nan
+
+x <- c(3, 5, 6, NA, 6)
+is.na(x)
+is.nan(x)
+
+x <- factor(c("hi", "vi", "bi", "chi", "hi", "chi"))
+x <- c(3, 5, 6, NA, 6, NaN)
+is.na(x)
+is.nan(x)
+
+
+# Data Frames
+
+x <- data.frame(day = 1:4, rain = c(T, T, F, F))
+nrow(x)
+ncol(x)
+x
+
+row.names(x) <- c("a", "b", "c", "d")
+x
+
+
+# Object names
+x = 1:3
+x
+names(x)
+names(x) <- c("col-A", "col-B", "col-C")
+x
+
+x <- list(a = 1, b = 2, c = 3)
+x
+x$b
+
+
+m <- matrix(1:6, nrow = 2, ncol = 3)
+m
+dimnames(m)
+dim(x)
+dimnames(m) <- list(c("r1", "r2"), c("c1", "c2", "c3"))
+dimnames(m)
+m
+
+
